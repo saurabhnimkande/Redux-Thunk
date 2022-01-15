@@ -1,8 +1,9 @@
 import { REGISTER_ERROR, REGISTER_LOADING, REGISTER_SUCCESS } from "./actionTypes";
 
 interface PayloadData {
-    error:string,
-    token:string
+    error:boolean,
+    message:string,
+    loading:boolean,
 }
 
 export const registerLoading = () => ({
@@ -14,7 +15,6 @@ export const registerSuccess= (payload:PayloadData) => ({
     payload,
 })
 
-export const registerError = (payload:PayloadData) => ({
+export const registerError = () => ({
     type:REGISTER_ERROR,
-    payload,
 })

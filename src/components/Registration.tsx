@@ -3,6 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 import { registerError, registerLoading, registerSuccess } from "../features/Register/actions";
 import { RootState } from "../store/store";
+import { Input ,Button} from 'antd';
+import 'antd/dist/antd.css';
+import "./Registration.css"
 
 interface UserData {
    name:string,
@@ -54,7 +57,7 @@ export const Registration = () => {
           dispatch(registerSuccess(res))
         })
         .catch((err) => {
-          dispatch(registerError(err))
+          dispatch(registerError())
         });
     }
 
@@ -68,34 +71,34 @@ export const Registration = () => {
 
     console.log(error)
     if(message === "Registration Success") {
+     
         return <Navigate to="/login"></Navigate>
     }
 
 
-    return loading?<h1>Registration in progress....</h1>: (
-        <div>
-            <h1>This is Sign up Page</h1>
+    return loading?<img className="loadingImage" src="https://cdn140.picsart.com/301568770156201.gif?to=crop&type=webp&r=-1x-1&q=95&width=1920" alt="loding"></img>: (
+        <div className="registerPage">
+            <h1>Sign up</h1>
             <br></br>
-            <label>Enter Name : </label>
-            <input type="text" placeholder="Enter Name" onChange={handleChange} name="name"></input>
+            <p className="lableText">Enter Name : </p>
+            <Input type="text" placeholder="Enter Name" onChange={handleChange} name="name" className="inputBox"></Input>
             <br></br>
-            <label>Enter Email : </label>
-            <input type="email" placeholder="Enter Email" onChange={handleChange} name="email"></input>
+            <p className="lableText">Enter Email : </p>
+            <Input type="email" placeholder="Enter Email" onChange={handleChange} name="email" className="inputBox"></Input>
             <br></br>
-            <label>Enter Password : </label>
-            <input type="password" placeholder="Enter Password" onChange={handleChange} name="password"></input>
+            <p className="lableText">Enter Password : </p>
+            <Input type="password" placeholder="Enter Password" onChange={handleChange} name="password" className="inputBox"></Input>
             <br></br>
-            <label>Enter Username : </label>
-            <input type="text" placeholder="Enter Username" onChange={handleChange} name="username"></input>
+            <p className="lableText">Enter Username : </p>
+            <Input type="text" placeholder="Enter Username" onChange={handleChange} name="username" className="inputBox"></Input>
             <br></br>
-            <label>Enter Mobile Number : </label>
-            <input type="number" placeholder="Enter Mobile Number" onChange={handleChange} name="mobile"></input>
+            <p className="lableText">Enter Mobile Number : </p>
+            <Input type="number" placeholder="Enter Mobile Number" onChange={handleChange} name="mobile" className="inputBox"></Input>
             <br></br>
-            <label>Enter Bio : </label>
-            <input type="text" placeholder="Enter Bio" onChange={handleChange} name="description"></input>
+            <p className="lableText">Enter Bio : </p>
+            <Input type="text" placeholder="Enter Bio" onChange={handleChange} name="description" className="inputBox"></Input>
             <br></br>
-            <button onClick={handleRegister}>Sign UP</button>
-            {message}
+            <Button onClick={handleRegister} className="loginButton">Sign UP</Button>
         </div>
     )
 }

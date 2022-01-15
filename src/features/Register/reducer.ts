@@ -29,9 +29,11 @@ export const registerReducer = (state=init, {type,payload}:DestPayload) => {
                     loading:false,
                 } 
         case REGISTER_ERROR:
+            console.log(payload,"error")
             return {
                 ...state,
-                error:payload.error,
+                message:"none",
+                loading:false,
             }
         default :
         return state;

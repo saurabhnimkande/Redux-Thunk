@@ -1,0 +1,26 @@
+#loginPage {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 90px;
+}
+#loginPage h1 {
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+.wrongDetails {
+  color: red;
+}
+.inputBox {
+  width: 50%;
+}
+.lableText {
+  margin: 0px;
+  margin-top: 15px;
+}
+.loginButton {
+  margin-top: 15px;
+}
+.loadingImage {
+  margin-left: 350px;
+  margin-top: 80px;
+}

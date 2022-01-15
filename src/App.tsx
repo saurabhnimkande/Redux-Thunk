@@ -5,6 +5,7 @@ import { Homepage } from './components/Homepage';
 import { Login } from './components/Login';
 import { Navbar } from './components/Navbar';
 import { Registration } from './components/Registration';
+import 'antd/dist/antd.css';
 
 function App() {
   return (

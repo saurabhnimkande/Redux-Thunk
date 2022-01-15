@@ -1,0 +1,31 @@
+.displayDiv > a > div > img {
+  width: 100%;
+}
+
+.inputGithub {
+  width: 40%;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-top: 110px;
+  z-index: 0;
+}
+
+.displayDiv {
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.205);
+}
+
+.profilesDisplay {
+  margin: 20px;
+  display: grid;
+  margin-left: 86px;
+  grid-template-columns: 17.5% 17.5% 17.5% 17.5%;
+  gap: 120px;
+}
+
+.pagination {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
